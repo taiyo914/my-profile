@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://taiyo914.github.io/my-profile/",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

@@ -1,10 +1,13 @@
 import express from 'express';
+import App from "../src/App.tsx";
+import { renderToString } from 'react-dom/server';
 
 const app = express();
 const PORT = 9000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.use('/', (request, response) => {
+  const html = renderToString(<App />);
+  response.send(html);
 });
 
 app.listen(PORT, () => {

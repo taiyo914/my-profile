@@ -1,10 +1,8 @@
-import React,{useState, useEffect} from 'react';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Footer from './components/Footer';
+import React, {useState, useEffect} from 'react';
 
 function App() {
   const [myname, setMyname] = useState("");
+  const [count, setCount] = useState(0);
 
   useEffect(()=>{
     setMyname("Taiyo Suzuki");
@@ -13,7 +11,8 @@ function App() {
   return (
     <div>
        <header style={{ backgroundColor: '#4d88ff', color: 'white', textAlign: 'center', fontSize:"25px",padding:"1px" ,fontWeight:"bold"}}>
-        <h1>My Profile</h1>
+        <h1>My Profile {count}</h1>
+      <button onClick={()=>setCount(count+1)}>+</button>
       </header>
       <main style={{ padding: '20px'}}>
       <h1 style={{fontSize:"25px", fontWeight:"bold"}}>Welcome to My Profile!</h1>

@@ -5,13 +5,17 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "es5",
     "module": "CommonJS",
     "strict": true,
+    "jsx": "react",  // または "jsx": "react-jsx"
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-  "include": ["server/**/*"]
+  "include": [
+    "src/**/*",  // クライアントサイドのソースコード,
+    "server/**/*"
+  ]
 }

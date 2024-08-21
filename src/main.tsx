@@ -1,6 +1,5 @@
-import React from "react";
-import { StrictMode } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
+import React from "react"; //webpackするには必要みたい
+import { hydrateRoot } from 'react-dom/client'
 import App from './App'
 import './index.css'
 

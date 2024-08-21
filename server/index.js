@@ -18,7 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../dist')));
 app.get('*', (req, res) => {
   const appHTML = renderToString(<App />);
 
-  const indexFile = path.resolve(__dirname, '../dist');
+  const indexFile = path.resolve(__dirname, '../dist/index.html');
 
   fs.readFile(indexFile, 'utf8', (err, data) => {
     if (err) {

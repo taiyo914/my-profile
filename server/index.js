@@ -8,12 +8,7 @@ import { renderToString } from 'react-dom/server';
 const app = express();
 const PORT = 9000;
 
-app.use(express.static(path.resolve(__dirname, '../dist')));
-
-// app.use('/', (request, response) => {
-//   const html = renderToString(<App />);
-//   response.send(html);
-// });
+app.use(express.static(path.resolve(__dirname, '../dist/client')));
 
 app.get('*', (req, res) => {
   const appHTML = renderToString(<App />);

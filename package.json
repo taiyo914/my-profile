@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "webpack": "npx webpack --config webpack.server.config.cjs",
-    "server": "node dist/bundle.js"
+    "webpack": "npx webpack --config webpack.config.cjs",
+    "server": "node dist/server.js"
   },
   "dependencies": {
     "express": "^4.19.2",
